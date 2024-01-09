@@ -1,0 +1,17 @@
+<mat-sidenav-container class="nav-container">
+    <mat-sidenav #sidenav class="sidenav" mode="push" closed fixedInViewport="true" position="end">
+        <button mat-icon-button (click)="sidenav.toggle()" class="mat-nav-button">
+            <i class="material-icons">close</i>
+        </button>
+        <mat-list class="mat-list">
+            <p>Esse projeto é um exemplo de blog criado com Angular framework</p>
+        </mat-list>
+    </mat-sidenav>
+    <mat-sidenav-content>
+        <button mat-icon-button (click)="sidenav.toggle()" class="mat-nav-button-info">
+            <i class="material-icons">info</i>&nbsp;
+            <span>Sobre essa página</span>
+        </button>
+        <router-outlet></router-outlet>
+    </mat-sidenav-content>
+</mat-sidenav-container>

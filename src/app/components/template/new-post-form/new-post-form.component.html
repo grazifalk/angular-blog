@@ -1,0 +1,33 @@
+<mat-card>
+    <mat-card-title>
+        <h1>Novo Post</h1>
+    </mat-card-title>
+    <mat-card-subtitle>
+        <h2>O que você está assistindo?</h2>
+    </mat-card-subtitle>
+    <mat-card-content>
+        <mat-form-field>
+            <mat-label>Seu username github</mat-label>
+            <input matInput [(ngModel)]="post.user" />
+            <mat-hint>Exemplo: @grazifalk</mat-hint>
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label>Título do Post</mat-label>
+            <input matInput [(ngModel)]="post.title" />
+            <mat-hint>Exemplo: Matrix</mat-hint>
+        </mat-form-field>
+        <mat-form-field appearance="outline" class="textarea">
+            <mat-label>Escreva sobre o que você está assistindo...</mat-label>
+            <textarea matInput class="textareaContent" [(ngModel)]="post.postContent"></textarea>
+        </mat-form-field>
+    </mat-card-content>
+    <mat-card-actions align="end">
+        <button mat-button color="primary" (click)="publish()" [disabled]="post.user && post.title && post.postContent ? false : true">
+            Publicar <i class="material-icons">rate_review</i>
+        </button>
+        <button mat-button color="warning" (click)="cancel()">
+            {{post.postContent == "" ? "Voltar" : "Cancelar"}}
+            <i class="material-icons">cancel</i>
+        </button>
+    </mat-card-actions>
+</mat-card>
