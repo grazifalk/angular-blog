@@ -44,9 +44,9 @@ body {
         background-color: var(--darkest-grey);
         background-image: url(./assets/img/logo.svg);
         background-repeat: no-repeat;
-        background-size: 25rem;
-        background-position-x: calc(100% - 20px);
-        background-position-y: 15rem;
+        background-size: 18rem;
+        background-position-x: calc(100% - 100px);
+        background-position-y: 8rem;
         animation: backgroundFadeIn 2s;
     }
 

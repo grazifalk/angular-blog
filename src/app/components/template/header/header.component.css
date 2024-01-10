@@ -61,14 +61,14 @@
     display: none;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) {   
     .toolbar {
         height: 120px;
         justify-content: space-between;
     }
 
     .toolbar a {
-        align-items: baseline;
+        /* align-items: baseline; */
         flex-direction: row;
     }
 
@@ -95,6 +95,7 @@
         margin: 2rem .1rem 1rem 1rem;
         opacity: .8;
         transition: .2s;
+        cursor: pointer;
     }
 
     .link-item:hover, .link-item:active {

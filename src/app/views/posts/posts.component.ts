@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { Post } from 'src/app/components/template/new-post-form/post-form.model';
+import { UpdatePostFormComponent } from 'src/app/components/template/update-post-form/update-post-form.component';
 import { PostServiceService } from 'src/app/services/post-service.service';
 
 @Component({
@@ -29,7 +30,13 @@ export class PostsComponent implements OnInit {
 
   update(post: Post) {
     this.postService.setPost(post);
-    // this.dialog.open(EditPostFormComponent);
-  }
+    const dialogRef = this.dialog.open(UpdatePostFormComponent);
+  
+    dialogRef.afterClosed().subscribe(result => {
+      if (result === 'updated') {
+        this.ngOnInit();
+      }
+    });
+  }  
 
 }

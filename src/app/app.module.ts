@@ -26,6 +26,7 @@ import { AboutComponent } from './components/template/about/about.component';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import {MatListModule} from '@angular/material/list';
 import { SidenavInfoComponent } from './components/template/sidenav-info/sidenav-info.component';
+import { UpdatePostFormComponent } from './components/template/update-post-form/update-post-form.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,8 @@ import { SidenavInfoComponent } from './components/template/sidenav-info/sidenav
     PostsComponent,
     PostsButtonComponent,
     AboutComponent,
-    SidenavInfoComponent
+    SidenavInfoComponent,
+    UpdatePostFormComponent
   ],
   imports: [
     BrowserModule,
